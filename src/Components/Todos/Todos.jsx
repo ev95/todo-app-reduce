@@ -1,4 +1,4 @@
-import { act, useReducer } from 'react';
+import { useReducer } from 'react';
 import styles from './Todos.module.css';
 import ToDo from '../ToDo/ToDo';
 
@@ -73,7 +73,6 @@ const reducer = (state, action) => {
                     })
                 }
             }
-
         }
         default: {
             return state
@@ -93,16 +92,17 @@ function Todos() {
                 value={state.value}
                 onChange={(e) => dispatch({ type: 'changeValue', payload: e.target.value })}
                 placeholder="Add a new task..."
-                className={`${styles.input} ${state.isValid ? styles.error : ''}`}
-            />
+                className={`${styles.input} ${state.isValid ? styles.error : ''}`} />
             {
                 state.isValid && <p className={styles.error_text}>Please enter text</p>
             }
             <button onClick={() => dispatch({ type: 'addItem' })} className={styles.button}>Add</button>
             <ul className={styles.taskList}>
-                {state.todos.map((task) => (
-                    <ToDo key={task.id} task={task} dispatch={dispatch} />
-                ))}
+                {
+                    state.todos.map((task) => (
+                        <ToDo key={task.id} task={task} dispatch={dispatch} />
+                    ))
+                }
             </ul>
             {
                 state.todos.length === 0 ? <p className={styles.noItems}> No Items</p> : ''

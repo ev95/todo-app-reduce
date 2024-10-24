@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './ToDo.module.css'
 
 function ToDo({ task, dispatch }) {
-    const [isShowInput, setShowInput] = useState(false)
+    const [isShowInput, setShowInput] = useState(false);
 
     return (
         <li className={task.isDone ? styles.completed : ''}>
