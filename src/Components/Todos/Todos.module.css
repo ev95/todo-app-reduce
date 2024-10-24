@@ -1,0 +1,70 @@
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #4a90e2;
+}
+
+.input {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.button:hover {
+  background-color: #357abd;
+}
+
+.taskList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.taskList li {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.taskList li:last-child {
+  border-bottom: none;
+}
+
+.error {
+  border-color: red;
+}
+
+.error_text {
+  margin: 3px 0 0 2px;
+  color: red;
+  font-size: 14px;
+}
+
+.noItems {
+  text-align: center;
+  font-size: 18px;
+  color: #5a5a5a;
+}
